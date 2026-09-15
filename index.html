@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Plombier - Aventure 2D</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="hud">
+      <div class="hud-item">SCORE<span id="score">0</span></div>
+      <div class="hud-item">PIÈCES<span id="coins">0</span></div>
+      <div class="hud-item">VIES<span id="lives">3</span></div>
+      <div class="hud-item">MONDE<span id="world">1-1</span></div>
+    </div>
+    <canvas id="game" width="960" height="540"></canvas>
+    <div id="overlay" class="hidden">
+      <h1 id="overlay-title">Prêt ?</h1>
+      <p id="overlay-text">Flèches / QSD pour bouger, Espace ou Haut pour sauter.</p>
+      <button id="overlay-btn">Jouer</button>
+    </div>
+    <div id="mobile-controls">
+      <div class="mc-left">
+        <button id="btn-left" class="mc-btn">◀</button>
+        <button id="btn-right" class="mc-btn">▶</button>
+      </div>
+      <div class="mc-right">
+        <button id="btn-jump" class="mc-btn mc-jump">⤴</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
