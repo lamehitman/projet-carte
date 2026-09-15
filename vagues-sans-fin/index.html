@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vagues Sans Fin</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="hud">
+      <div class="hud-row">
+        <div class="hud-block">
+          <span class="hud-label">Manche</span>
+          <span class="hud-value" id="wave">1</span>
+        </div>
+        <div class="hud-block">
+          <span class="hud-label">Niveau</span>
+          <span class="hud-value" id="level">1</span>
+        </div>
+        <div class="hud-block">
+          <span class="hud-label">Éliminations</span>
+          <span class="hud-value" id="kills">0</span>
+        </div>
+      </div>
+      <div class="bar hp-bar">
+        <div class="bar-fill hp-fill" id="hp-fill"></div>
+        <span class="bar-text" id="hp-text">100 / 100</span>
+      </div>
+      <div class="bar xp-bar">
+        <div class="bar-fill xp-fill" id="xp-fill"></div>
+      </div>
+    </div>
+
+    <canvas id="game" width="960" height="600"></canvas>
+
+    <div id="wave-banner" class="hidden"></div>
+
+    <div id="levelup-overlay" class="overlay hidden">
+      <h2>Niveau supérieur !</h2>
+      <p>Choisis une capacité</p>
+      <div id="cards"></div>
+    </div>
+
+    <div id="start-overlay" class="overlay">
+      <h1>Vagues Sans Fin</h1>
+      <p>Déplace-toi avec les flèches ou ZQSD / WASD. Ton personnage tire automatiquement
+      sur l'ennemi le plus proche. Survis aux manches, monte en niveau et choisis tes
+      capacités pour tenir le plus longtemps possible.</p>
+      <button id="start-btn">Combattre</button>
+    </div>
+
+    <div id="gameover-overlay" class="overlay hidden">
+      <h1>Défaite</h1>
+      <p id="gameover-stats"></p>
+      <button id="restart-btn">Retenter</button>
+    </div>
+
+    <div id="mobile-stick">
+      <div id="stick-base"><div id="stick-knob"></div></div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
